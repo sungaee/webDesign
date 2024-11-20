@@ -147,28 +147,49 @@
     </div>
 
     <script>
-        window.onload = function(){
-            let currentIndex = 0;
-            const sliderWrap = document.querySelector(".sliderWrap"); //전체 이미지
-            const slider = document.querySelectorAll(".slider"); //각각 이미지
-            const sliderClone = sliderWrap.firstElementChild.cloneNode(true); //첫번째 자식 이미지 저장
-            sliderWrap.appendChild(sliderClone); //복사한 이미지를 마지막에 추가
+        // window.onload = function(){
+        //     let currentIndex = 0;
+        //     const sliderWrap = document.querySelector(".sliderWrap"); //전체 이미지
+        //     const slider = document.querySelectorAll(".slider"); //각각 이미지
+        //     const sliderClone = sliderWrap.firstElementChild.cloneNode(true); //첫번째 자식 이미지 저장
+        //     sliderWrap.appendChild(sliderClone); //복사한 이미지를 마지막에 추가
 
-            setInterval(() => {
-                currentIndex++; //현재이미지 1씩 증가
-                sliderWrap.style.marginLeft = -currentIndex * 100 + "%"; //이미지 이동
-                sliderWrap.style.transition = "all 0.6s";
+        //     setInterval(() => {
+        //         currentIndex++; //현재이미지 1씩 증가
+        //         sliderWrap.style.marginLeft = -currentIndex * 100 + "%"; //이미지 이동
+        //         sliderWrap.style.transition = "all 0.6s";
 
-                if(currentIndex === 3){
-                    setTimeout(() => {
-                        sliderWrap.style.transition = "0s";
-                        sliderWrap.style.marginLeft = "0";
-                        currentIndex = 0; //이미지 최고하
-                    }, 700);
-                }
+        //         if(currentIndex === 3){ //마지막 이미지
+        //             setTimeout(() => {
+        //                 sliderWrap.style.transition = "0s"; //애니메이션 정지
+        //                 sliderWrap.style.marginLeft = "0"; //이미지위치 초기화
+        //                 currentIndex = 0; //이미지 초기화
+        //             }, 700);
+        //         }
+        //     }, 2000);
+        // }
 
-            }, 2000);
-        }
+
+     window.onload = function(){
+        let currentIndex = 0;
+        const sliderWrap = document.querySelector(".sliderWrap");
+        const sliderClone = sliderWrap.firstElementChild.cloneNode(true);
+        sliderWrap.appendChild(sliderClone);
+
+        setInterval(() => {
+            currentIndex++;
+            sliderWrap.style.marginLeft = -currentIndex * 100 + "%";
+            sliderWrap.style.transition = "all 0.6s";
+
+            if(currentIndex === 3){
+                setTimeout(() => {
+                    sliderWrap.style.marginLeft = "0";
+                    sliderWrap.style.transition = "0s";
+                    currentIndex = 0;
+                },700);
+            }
+        },2000);
+     }
     </script>
 </body>
 </html>
