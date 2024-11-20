@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S-2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header{
+            width: 100%;
+            display: flex;
+        }
+        #header .logo{
+            width: 30%;
+            height: 100px;
+            background-color: #ececec;
+        }
+        #header .menu{
+            width: 70%;
+            height: 100px;
+            background-color: #cbcbcb;
+        }
+
+        #slider{
+            width: 100%;
+            height: 300px;
+            background-color: #e3e3e3;
+        }
+
+        #contents {
+            width: 100%;
+            display: flex;
+        }
+        #contents .content1{
+            width: 33.3333%;
+            height: 200px;
+            background-color: #c5c5c5;
+        }
+        #contents .content2{
+            width: 33.3333%;
+            height: 200px;
+            background-color: #a8a7a7;
+        }
+        #contents .content3{
+            width: 33.3333%;
+            height: 200px;
+            background-color: #8e8e8e;
+        }
+
+        #footer{
+            width: 100%;
+            display: flex;
+        }
+        #footer .footer1{
+            width: 10%;
+            height: 100px;
+            background-color: #f1f1f1;
+        }
+        #footer .footer2{
+            width: 80%;
+            height: 100px;
+            background-color: #c7c5c5;
+        }
+        #footer .footer3{
+            width: 10%;
+            height: 100px;
+            background-color: #585858;
+        }
+
+        #slider {
+            overflow: hidden;
+        }
+        /* slider */
+        .sliderWrap{
+            display: flex;
+        }
+        .sliderWrap .slider{
+            position: relative;
+        }
+        .sliderWrap .slider img{
+            vertical-align: top;
+        }
+        .sliderWrap span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            padding: 10px 20px;
+            background-color: #00000061;
+            color: #fff;
+            transform:translate(-50%, -50%)
+        }
+        /* 자바스크립트용 */
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo"></h1>
+            <nav class="menu"></nav>
+        </header>
+        <!-- header -->
+
+        <article id="slider">
+            <div class="sliderWrap">
+                <div class="slider s1">
+                    <img src="image/slider1.jpg" alt="이미지설명1">
+                    <span>이미지1</span>
+                </div>
+                <div class="slider s2">
+                    <img src="image/slider2.jpg" alt="이미지설명2">
+                    <span>이미지2</span>
+                </div>
+                <div class="slider s3">
+                    <img src="image/slider3.jpg" alt="이미지설명3">
+                    <span>이미지3</span>
+                </div>
+            </div>
+        </article>
+        <!-- slider -->
+
+        <main id="contents">
+            <div class="content1"></div>
+            <div class="content2"></div>
+            <div class="content3"></div>
+        </main>
+        <!-- contents -->
+
+        <footer id="footer">
+            <div class="footer1"></div>
+            <div class="footer2"></div>
+            <div class="footer3"></div>
+        </footer>
+    </div>
+
+    <script>
+        window.onload = function(){
+            let currentIndex = 0;
+            const sliderWrap = document.querySelector(".sliderWrap"); //전체 이미지
+            const slider = document.querySelectorAll(".slider"); //각각 이미지
+            const sliderClone = sliderWrap.firstElementChild.cloneNode(true); //첫번째 자식 이미지 저장
+            sliderWrap.appendChild(sliderClone); //복사한 이미지를 마지막에 추가
+
+            setInterval(() => {
+                currentIndex++; //현재이미지 1씩 증가
+                sliderWrap.style.marginLeft = -currentIndex * 100 + "%"; //이미지 이동
+                sliderWrap.style.transition = "all 0.6s";
+
+                if(currentIndex === 3){
+                    setTimeout(() => {
+                        sliderWrap.style.transition = "0s";
+                        sliderWrap.style.marginLeft = "0";
+                        currentIndex = 0; //이미지 최고하
+                    }, 700);
+                }
+
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
