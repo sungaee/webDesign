@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S-6</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        #wrap{
+            width: 100%;
+        }
+        #main {
+            width: 100%;
+            height: calc(100vh - 120px);
+            display: flex;
+        }
+        #header{
+            width: 300px;
+            height: 100%;
+        }
+        #header .logo{
+            width: 100%;
+            height: 20%;
+            background-color: #e7e7e7;
+        }
+        #header .menu{
+            width: 100%;
+            height: 80%;
+            background-color: #d5d3d3;
+        }
+        #contents{
+            width: 400px;
+            height: 100%;
+        }
+        #contents .content1 {
+            width: 100%;
+            height: 10%;
+            background-color: #d5d3d3;
+        }
+        #contents .content2 {
+            width: 100%;
+            height: 40%;
+            background-color: #a5a4a4;
+        }
+        #contents .content3 {
+            width: 100%;
+            height: 40%;
+            background-color: #eef5ff;
+        }
+        #contents .content4 {
+            width: 100%;
+            height: 10%;
+            background-color: #ffe5e5;
+        }
+        #slider {
+            width: calc(100% - 600px);
+            height: 100%;
+            background-color: #f9ebeb;
+        }
+        #footer{
+            width: 100%;
+            height: 120px;
+            display: flex;
+        }
+        #footer .footer1{
+            width: 15%;
+            height: 100%;
+            background-color: #f9ebeb;
+        }
+        #footer .footer2{
+            width: 85%;
+            height: 100%;
+            background-color: #fedcdc;
+        }
+        #footer .footer2 .footer2-1{
+            width: 100%;
+            height: 50%;
+            background-color: #cccccc;
+        }
+        #footer .footer2 .footer2-2{
+            width: 100%;
+            height: 50%;
+            background-color: #a3a3a3;
+        }
+
+        /* slider */
+        #slider{
+            overflow: hidden;
+            height: calc(100vh -120px);
+        }
+       .sliderWrap{
+            width: 100%;
+            height: 300vh;
+       }
+       .sliderWrap .slider.s1{
+            background-image: url(image/slider2.jpg);
+       }
+       .sliderWrap .slider.s2{
+            background-image: url(image/slider3.jpg);
+       }
+       .sliderWrap .slider.s3{
+            background-image: url(image/slider4.jpg);
+       }
+       .sliderWrap .slider img{
+            vertical-align: top;
+       }
+       .sliderWrap .slider{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+       }
+       .sliderWrap .slider span{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #00000069;
+            color: white;
+            padding: 10px 20px;
+       }
+    </style>
+</head>
+<body>
+    <div id="wrap"></div>
+        <main id="main">
+            <header id="header">
+                <h1 class="logo"></h1>
+                <nav class="menu">
+
+                </nav>
+            </header>
+
+            <section id="contents">
+                <div class="content1"></div>
+                <div class="content2"></div>
+                <div class="content3"></div>
+                <div class="content4"></div>
+            </section>
+
+            <article id="slider">
+                <div class="sliderWrap">
+                    <div class="slider s1">
+                        <span>이미지1</span>
+                    </div>
+                    <div class="slider s2">
+                        <span>이미지2</span>
+                    </div>
+                    <div class="slider s3">
+                        <span>이미지3</span>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+
+        <footer id="footer">
+            <div class="footer1"></div>
+            <div class="footer2">
+                <div class="footer2-1"></div>
+                <div class="footer2-2"></div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        window.onload = function(){
+            let currentIndex = 0;
+            const sliderWrap = document.querySelector(".sliderWrap");
+            const slider = document.querySelectorAll(".slider");
+            const sliderClone = sliderWrap.firstElementChild.cloneNode(true);
+            sliderWrap.appendChild(sliderClone);
+
+            setInterval(() => {
+                currentIndex++;
+                sliderWrap.style.transform = `translateY(-${currentIndex * 100}vh)`;  
+                sliderWrap.style.transition = "all 0.6s";
+
+                if(currentIndex == slider.length){
+                    setTimeout(() => {
+                        sliderWrap.style.transform = "translateY(0)";
+                        sliderWrap.style.transition = "0s";
+                        currentIndex = 0;
+                    },600)
+                }
+            },3000);
+        }
+    </script>
+</body>
+</html>
