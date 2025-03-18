@@ -38,6 +38,7 @@ header{
     height: 50px;
     overflow: hidden;
     transition: all 0.6s ease 0s;
+    background-color: #fff;
 }
 .gnb:hover{
     height: 180px;
@@ -95,7 +96,6 @@ header{
 }
 .contents>section{
     flex: 1;
-    border: 1px solid blue;
 }
 .tabs{
     display: flex;
@@ -103,7 +103,6 @@ header{
 }
 .tabs>a{
     padding: 15px 20px;
-    border: 1px solid black;
     color: #5f6064;
 }
 .tabs>a.on{
@@ -113,19 +112,89 @@ header{
 .tabs_contents{
     width: 100%;
 }
-.notice{
-    padding: 15px 15px;
-}
 .notice>li{
     display: flex;
     justify-content: space-between;
     padding: 5px 0;
 }
-.notice>li>span{
-
-}
 .gallery{
-    /* display: none; */
     display: flex;
     justify-content: space-between;
+    display: none;
+}
+.gallery.on{
+    display: flex;
+}
+.notice{
+    display: none;
+}
+.notice.on{
+    display: block;
+}
+.banner{
+    background: url(../images/banner.jpg) no-repeat 50% 50% / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner a{
+    padding: 10px;
+    background-color: #fff;
+}
+.direct{
+    background: url(../images/direct.jpg) no-repeat 50% 50% / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.direct a{
+    padding: 10px;
+    background-color: #fff;
+}
+footer{
+    height: 100px;
+    background-color: #000;
+    color: #fff;
+}
+.footer_container {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.footer2{
+    display: block;
+
+}
+.foot_menu>a{
+    margin-right: 10px;
+    text-decoration: underline;
+}
+.popup{
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border: 1px solid black;
+    background-color: #fff;
+    width: 400px;
+    padding: 25px;
+    display: none;
+}
+.popup>*{
+    padding: 10px;
+}
+.close_wrap{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+.pop_close{
+    border: 1px solid black;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.popup.on{
+    display: block;
 }
