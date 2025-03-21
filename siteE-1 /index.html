@@ -1,131 +1,155 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>조이컨트리클럽</title>
-  <link rel="stylesheet" href="./css/style.css">
-  <script src="./js/index.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>김치이야기</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/index.js"></script>
 </head>
 <body>
+	<div class="container">
+		<header>
+			<h2 class="logo">
+				<a href="#">
+					<img src="./images/logo.png" alt="김치이야기">
+				</a>
+			</h2>
 
-    <div class="container">
-        <header>
-            <h2 class="logo">
-                <a href="#"><img src="./images/logo.png" alt="조이컨트리클럽"></a>
-            </h2>
-            <ul class="gnb">
-                <li>
-                    <a href="#">CLUB</a>
-                    <ul>
-                        <li><a href="#">클럽소개</a></li>
-                        <li><a href="#">시설안내</a></li>
-                    </ul>
-                </li>
-                <li>
+			<ul class="gnb">
+				<li>
+					<a href="#">김치 소개</a>
+					<ul>
+						<li><a href="#">초대의 글</a></li>
+						<li><a href="#">김치의 유래</a></li>
+						<li><a href="#">김치 재료</a></li>
+						<li><a href="#">오시는 길</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">김치퓨전</a>
+					<ul>
+						<li><a href="#">지역별 김치</a></li>
+						<li><a href="#">김치 스파게티</a></li>
+						<li><a href="#">김치 볶음밥</a></li>
+						<li><a href="#">김치와 고기</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">체험프로그램</a>
+					<ul>
+						<li><a href="#">김치 담그기</a></li>
+						<li><a href="#">명사와 함께</a></li>
+						<li><a href="#">관람하기</a></li>
+						<li><a href="#">예약하기</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">커뮤니티</a>
+					<ul>
+						<li><a href="#">공지사항</a></li>
+						<li><a href="#">참여게시판</a></li>
+						<li><a href="#">자료실</a></li>
+					</ul>
+				</li>
+			</ul>
 
-                    <a href="#">BOOKING</a>
-                    <ul>
-                        <li><a href="#">요금안내</a></li>
-                        <li><a href="#">예약안내</a></li>
-                        <li><a href="#">위약안내</a></li>
-                    </ul>
-                </li>
-                <li>
+			<div class="spot">
+				<a href="#">로그인</a>
+				<a href="#">회원가입</a>
+			</div>
+		</header>
+		<!-- header -->
 
-                    <a href="#">INFORMATION</a>
-                    <ul>
-                        <li><a href="#">명예의 전당</a></li>
-                        <li><a href="#">이벤트</a></li>
-                        <li><a href="#">자료실</a></li>
-                        <li><a href="#">포토갤러리</a></li>
-                    </ul>
-                </li>
-                <li>
+		<div class="wrap">
+			<div class="ba_wrap">
+				<div class="banner">
+					<img src="./images/banner.jpg" alt="배너">
+					<div class="banner_content">
+						<h2><a href="#">김치의 모든 것, 김치이야기와 함께하세요!</a></h2>
+						<span><a href="#">전통의 맛을 현대의 레시피로 재해석한 김치이야기!
+						다양한 김치 레시피와 건강한 발효식품에 대한 정보를 확인하세요.
+						신규 회원 가입 시 특별 할인 혜택도 제공하니 지금 바로 시작해 보세요!</a></span>
+					</div>
+					<a href="#"><img src="./images/arrow.png" alt="화살표"></a>
+	
+				</div>
+			</div>
+			
 
-                    <a href="#">COMMUNITY</a>
-                    <ul>
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">Q&B</a></li>
-                    </ul>
-                </li>
-            </ul>
+			<ul class="notice">
+				<li>
+					<a class="noti_tabs" href="#">공지사항</a>
+					<ul>
+						<li class="popup_click"><a href="#">김치 만들기 클래스 신청 안내</a><span>2024년 5월 1일</span></li>
+						<li><a href="#">특별 할인 이벤트: 인기 김치 제품 20% 할인</a><span>2024년 5월 10일</span></li>
+						<li><a href="#">김치 레시피 공모전 개최 안내</a><span>2024년 5월 15일</span></li>
+						<li><a href="#">김치 보관 및 관리 팁 업데이트</a><span>2024년 5월 20일</span></li>
+					</ul>
+				</li>
+				
+			</ul>
+			<ul class="gallery">
+				<li>
+					<a class="gall_tabs" href="#">갤러리</a>
+					<ul>
+						<li><a href="#"><img src="./images/gallery1.jpg" alt="갤러리1"></a><p>김치레시피공모전</p></li>
+						<li><a href="#"><img src="./images/gallery2.jpg" alt="갤러리2"></a><p>김치 보관</p></li>
+					</ul>
+				</li>
+				
+			</ul>
+			<div class="link">
+				<a href="#"><img src="./images/icon1.png" alt="회사소개"><p>회사소개</p></a>
+				<a href="#"><img src="./images/icon2.png" alt="지도"><p>지도</p></a>
+				<a href="#"><img src="./images/icon3.png" alt="공지사항"><p>공지사항</p></a>
+				<a href="#"><img src="./images/icon4.png" alt="전화문의"><p>전화문의</p></a>
+			</div>
+		</div>
+		<!-- wrap -->
 
-            <div class="spot">
-                <a href="#">로그인</a>
-                <a href="#">회원가입</a>
-            </div>
-        </header>
-        <div class="wrap">
-            <div class="station">
-                <ul class="direct">
-                    <li><a href="#"><img src="./images/icon1.png" alt="1"><p>갤러리</p></a></li>
-                    <li><a href="#"><img src="./images/icon2.png" alt="2"><p>자료실</p></a></li>
-                    <li><a href="#"><img src="./images/icon3.png" alt="3"><p>전화문의</p></a></li>
-                </ul>
-                <ul class="train">
-                    <li><a href="#"><img src="./images/slide1.png" alt="슬라이드1"></a></li>
-                    <li><a href="#"><img src="./images/slide2.png" alt="슬라이드2"></a></li>
-                    <li><a href="#"><img src="./images/slide3.png" alt="슬라이드3"></a></li>
-                </ul>
-            </div>
-            <div class="banner">
-                <a href="#"><img src="./images/banner.jpg" alt="조이컨트리클럽에서의 완벽한 휴식"></a>
-                <div class="banner_content">
-                    <h2><a href="#">조이컨트리클럽에서의 완벽한 휴식</a></h2>
-                    <p><a href="#">자연이 어우러진 조이컨트리클럽에서 잊지 못할 순간을 경험하세요.
-                        프리미엄 골프 코스와 다양한 레저 시설, 그리고 가족과 함께 즐길 수 있는 이벤트가 준비되어 있습니다.</a></p>
-                </div>
-                <a href="#"><img src="./images/arrow.png" alt="화살표"></a>
-            </div>
-            <div class="tabWrap">
-                <div class="tabs">
-                    <a class="on" href="#">공지사항</a>
-                    <a href="#">갤러리</a>
-                </div>
-                <div class="tab_contents">
-                    <ul class="notice on">
-                        <li class="popup_click"><a href="#">2024년 시즌 오프닝 안내</a><span>2024년 3월 1일</span></li>
-                        <li><a href="#">2024년 시즌 오프닝 안내</a><span>2024년 3월 2일</span></li>
-                        <li><a href="#">2024년 시즌 오프닝 안내</a><span>2024년 3월 3일</span></li>
-                        <li><a href="#">2024년 시즌 오프닝 안내</a><span>2024년 3월 4일</span></li>
-                    </ul>
-                    <ul class="gallery">
-                        <li><a href="#"><img src="./images/gallery1.png" alt="1"></a></li>
-                        <li><a href="#"><img src="./images/gallery1.png" alt="2"></a></li>
-                        <li><a href="#"><img src="./images/gallery1.png" alt="3"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--// container -->
+		<div class="station">
+			<ul class="train">
+				<li><a href="#"><img src="./images/slide1.jpg" alt="김치의 역사: 전통과 문화의 만남"></a></li>
+				<li><a href="#"><img src="./images/slide2.jpg" alt="다양한 김치 레시피: 집에서 쉽게 만들기"></a></li>
+				<li><a href="#"><img src="./images/slide3.jpg" alt="김치의 건강 효능: 몸에 좋은 발효식품"></a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- //container -->
 
-    <footer>
-        <h2 class="foot_logo">
-            <a href="#"><img src="./images/foot_logo.png" alt="조이컨트리클럽"></a>
-        </h2>
-        <div class="copy"><a href="#">COPYRIGHTⓒ by BARUNWEBDESIGN. ALL RIGHTS RESERVED.</a></div>
-        <div class="sns">
-            <a href="#"><img src="./images/sns1.jpg" alt="1"></a>
-            <a href="#"><img src="./images/sns2.jpg" alt="2"></a>
-            <a href="#"><img src="./images/sns3.jpg" alt="3"></a>
-        </div>
-    </footer>
-    <!-- // footer -->
+	<footer>
+		<div class="footer1">
+			<h2 class="foot_logo"><a href="#"><img src="./images/foot_logo.png" alt="김치이야기"></a></h2>
+		</div>
+		<div class="footer2">
+			<ul class="foot_menu">
+				<li><a href="#">회사 소개</a></li>
+				<li><a href="#">제품 소개</a></li>
+				<li><a href="#">레시피 모음</a></li>
+				<li><a href="#">고객 지원</a></li>
+				<li><a href="#">배송 및 반품 안내</a></li>
+				<li><a href="#">개인정보 처리방침</a></li>
+			</ul>
+			<p class="copy"><a href="#">COPYRIGHTⓒ by BARUNWEBDESIGN. ALL RIGHTS RESERVED.</a></p>
+		</div>
+		
+	</footer>
+	<!-- //footer -->
 
-    <div class="popup">
-        <h2>조이컨트리클럽에 오신 것을 환영합니다!</h2>
-        <p>안녕하세요!
-            조이컨트리클럽을 찾아주셔서 감사합니다.
-            저희 클럽은 자연과 함께하는 다양한 레저 활동을 통해 여러분에게 특별한 경험을 제공하고자 합니다.
-            시설 안내와 최신 이벤트 정보는 아래 링크를 통해 확인해 주세요.
-            가족 및 친구와 함께 잊지 못할 추억을 만들어보세요!</p>
-        <div class="popup_ctl">
-            <div class="popup_close">
-            x닫기
-            </div>
-        </div>
-    </div>
+	<div class="modal"></div>
+	<div class="popup">
+		<h2>김치이야기에 오신 것을 환영합니다!</h2>
+		<p>안녕하세요! 김치이야기를 방문해 주셔서 감사합니다.
+			우리의 특별한 김치 레시피와 다양한 정보를 통해 김치의 매력을 함께 느껴보세요!
+			신규 회원 가입 시 첫 구매에 대한 할인 혜택도 있으니 놓치지 마세요!</p>
+		<div class="popup_ctl">
+			<div class="popup_close">
+				x닫기
+			</div>
+		</div>
+	</div>
+
+
 </body>
 </html>
